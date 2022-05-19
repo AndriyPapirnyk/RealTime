@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap" rel="stylesheet">
+    <title>Real Time</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.wrap{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: rgb(230, 230, 251);
+}
+.left_page{
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right_page{
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.clock{
+    height: 100vh;
+}
+.s_hours{
+    position: absolute;
+    width: 430px;
+    height: 430px;
+}
+.s_min{
+    position: absolute;
+    width: 430px;
+    height: 430px;
+}
+.s_sec{
+position: absolute;
+width: 430px;
+    height: 430px;
+    transition: 0.1s;
+}
+.p1{
+    font-size: 25px;
+    font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+}
+#Time{
+    font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-size: 50px;
+}
+#Day{
+    font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-size: 50px;
+}
+#Year{
+    font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-size: 50px;
+}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="left_page">
+            <img class="clock" src="clock.png" alt="">
+            <img id="arrow3" class="s_hours" src="s_h.png" alt="">
+            <img id="arrow2" class="s_min" src="s_min.png" alt="">
+            <img id="arrow1" class="s_sec" src="s_sec.png" alt="">
+        </div>
+        <div class="right_page">
+            <span id="Time"></span>
+            <p class="p1">Hours//Minutes//Seconds</p>
+            <span id="Day"></span>
+            <p class="p1">Date</p>
+            <span id="Year"></span>
+            <p class="p1">Year</p>
+        </div>
+    </div>
+
+
+
+    <script src="src_real_time.js"></script>
+</body>
+</html>
